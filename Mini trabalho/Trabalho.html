@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>telaCadastro</title>
+  </head>
+
+  <body style="text-align: center">
+    <h1>CADASTRO</h1>
+    <form name="telaCadastro" action="/Cadastro" method="post"></form>
+
+    <label for="nome"> <strong>Nome:</strong></label>
+    <input required maxlength="60" type="text" id="nome" />
+    <br />
+    <br />
+
+    <label for="email"><strong>Email:</strong></label>
+    <input
+      required
+      maxlength="180"
+      type="email"
+      id="email"
+      placeholder="Email"
+    />
+
+    <br />
+    <br />
+
+    <label maxlength="180" for="senha"><strong>Senha:</strong></label>
+    <input required type="password" id="senha" placeholder="Digite sua senha" />
+
+    <br />
+    <br />
+
+    <label maxlength="180" for="senha"><strong>Senha:</strong></label>
+    <input required type="password" id="senha" placeholder="Confirmar senha" />
+    <br />
+    <br />
+
+    <label for="Idade"><strong>Idade:</strong></label>
+    <input type="date" name="nascimento" id="nascimento" />
+    <br />
+    <br />
+    Cidade
+    <select name="cidade" id="cidade">
+      <option value="">Selecione sua cidade</option>
+      <option value="sao_paulo">São Paulo</option>
+      <option value="rio_de_janeiro">Rio de Janeiro</option>
+      <option value="belo_horizonte">Belo Horizonte</option>
+      <option value="salvador">Salvador</option>
+      <option value="fortaleza">Fortaleza</option>
+      <option value="curitiba">Curitiba</option>
+      <option value="recife">Recife</option>
+      <option value="porto_alegre">Porto Alegre</option>
+      <option value="brasilia">Brasília</option>
+      <option value="goiania">Goiânia</option>
+      <option value="manaus">Manaus</option>
+      <option value="belem">Belém</option>
+      <option value="campinas">Campinas</option>
+      <option value="sao_luis">São Luís</option>
+      <option value="cuiaba">Cuiabá</option>
+      <option value="joao_pessoa">João Pessoa</option>
+      <option value="aracaju">Aracaju</option>
+      <option value="Outro">Outro</option>
+    </select>
+    <br />
+    <br />
+    <label><strong>Sexo:</strong></label
+    ><br />
+    <input type="radio" name="sexo" id="masculino" value="masculino" />
+    <label for="masculino">Masculino</label>
+    <input type="radio" name="sexo" id="feminino" value="feminino" />
+    <label for="feminino">Feminino</label>
+    <input type="radio" name="sexo" id="outro" value="outro" />
+    <label for="outro">Outro</label>
+
+    <br />
+    <br />
+
+    <input
+      type="button"
+      value="Cadastrar"
+      onclick="alert('Cadastrado com sucesso!')"
+      style="
+        font-size: 16px;
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      "
+    />
+  </body>
+</html>

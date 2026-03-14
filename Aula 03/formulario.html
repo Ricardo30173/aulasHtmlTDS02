@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form name="cadastroForm" action="/processarDados" method="post"><!-- Formulário de cadastro -->
+
+
+      <form autocomplete="on"><!-- Atributo autocomplete para ativar ou desativar o preenchimento automático -->
+        <label for="nome">Nome:</label>
+        <input required type="text" name="nome" id="nome"><br><!-- Atributo required para tornar o campo obrigatório -->
+        
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id=""
+        placeholder="ex...: email@senac">
+        <br>
+
+        
+        <label for="telefone">Telefone:</label>
+        <input type="number" name="telefone" id="telefone" placeholder="(xx) xxxxx-xxxx"><!-- Atributo placeholder para exibir um texto de exemplo dentro do campo de entrada -->
+        <br>
+
+
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" id="senha">
+        <br>
+
+
+        <label for="Idade">Idade</label>
+        <input maxlength="3" type="number" name="Idade" id="Idade"><!-- Atributo maxlength para limitar o número máximo de caracteres que podem ser inseridos -->
+        
+        <input type="date" name="nascimento" id=""><!-- Campo de entrada para data abre o calendario -->
+
+        <br>
+
+        <label for="color">cor</label>
+        <input type="color" name="color" id="color"> <!-- Campo de entrada para cor abre a paleta de cores -->
+
+        <br>
+
+        <label for="range">range</label>
+        <input type="range" min="0" max="100" name="Intervalo" id=""> <!-- Campo de entrada para intervalo permite selecionar um valor dentro de um intervalo definido por meio de um controle deslizante -->
+        
+        <br>
+        <br>
+        
+        <input type="file" accept="" name="file" id="file"> <!-- Campo de entrada para arquivo permite que o usuário selecione um arquivo do seu dispositivo para upload -->
+        
+        
+        <br>
+
+        <input type="checkbox" name = termos id="">Aceito os termos<!-- Campo de entrada para checkbox permite que o usuário selecione ou desmarque uma opção -->
+        
+        <br>
+        <br>
+
+        <input type="radio" name="genero" id="masculino"><!-- Campo de entrada para radio permite que o usuário selecione apenas uma opção entre um conjunto de opções -->
+        <label for="masculino">Masculino</label><!-- Atributo name para agrupar os botões de opção, permitindo que apenas um seja selecionado -->
+        <input type="radio" name="genero" id="feminino">
+        <label for="feminino">Feminino</label>
+
+        <br>
+        <br>
+
+        <input type="button" value="Salvar" onclick="alert('Salvo com sucesso!')"><!-- Botão simples que não tem uma ação específica associada a ele, mas pode ser usado para acionar scripts ou outras funcionalidades personalizadas --> 
+
+    <label for="mensagem">Mensagem:</label>
+    <textarea name="mensagem" id="mensagem" rows="5" placeholder="Digite sua mensagem"></textarea><!-- Campo de entrada para área de texto permite que o usuário insira um texto mais longo, como uma mensagem ou comentário -->
+
+        <br>
+        <br>
+
+
+        
+            Cidade<select name="cidade" id="cidade"><!-- Campo de entrada para seleção permite que o usuário escolha uma opção de uma lista suspensa -->
+            <option value="">Selecione sua cidade</option>
+            <option value="sao_paulo">São Paulo</option>
+            <option value="rio_de_janeiro">Rio de Janeiro</option>
+            <option value="belo_horizonte">Belo Horizonte</option><br>
+
+            <br>
+            <br>
+
+            <input list="navegadores" name="navegador" placeholder="qual o seu navegador"><!-- Campo de entrada para lista de opções permite que o usuário escolha uma opção de uma lista suspensa ou insira um valor personalizado -->
+            <datalist id="navegadores"><!-- Elemento datalist para definir a lista de opções para o campo de entrada -->
+                <option value="Google Chrome"><!-- Opção para o campo de entrada de lista de opções -->
+                <option value="Mozilla Firefox">
+                <option value="Microsoft Edge">
+                <option value="Safari">
+                <option value="Opera">
+
+                    <br>
+                    <br>
+                    <Fieldset>
+                    <legend>Informações Pessoais</legend><!-- Elemento legend para fornecer um título para o grupo de elementos dentro do fieldset -->
+                    <label for="nome">nome</label>
+                    <input type="text" name="nomeCliente" id="nomeCliente"><!-- Elemento fieldset para agrupar elementos relacionados em um formulário, melhorando a organização e a acessibilidade -->
+
+                    <br>
+
+                    <label for="nome">Email</label>
+                    <input type="text" name="emailCliente" id="emailCliente">
+                    </Fieldset>
+        <input type="submit" value="Enviar"/><!-- Botão de envio para enviar os dados do formulário para o servidor -->
+
+
+        <input type="reset" value="Limpar"/> <!-- Botão de reset para limpar!-->
+        
+
+
+</body>
+</html>
