@@ -4,14 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>telaCadastro</title>
+
+    <style>
+      label {
+        font-family: Segoe UI;
+        color: #333;
+      }
+      body {
+        background-color: #cccbcb;
+      }
+    </style>
   </head>
 
   <body style="text-align: center">
-    <h1>CADASTRO</h1>
+    <h1
+      style="
+        width: auto;
+        vertical-align: middle;
+        font-size: 60px;
+        color: #5d9e85;
+      "
+    >
+      CADASTRO
+    </h1>
     <form name="telaCadastro" action="/Cadastro" method="post"></form>
 
     <label for="nome"> <strong>Nome:</strong></label>
-    <input required maxlength="60" type="text" id="nome" />
+    <input
+      required
+      maxlength="60"
+      type="text"
+      id="nome"
+      placeholder="Digite seu nome"
+    />
     <br />
     <br />
 
@@ -21,7 +46,7 @@
       maxlength="180"
       type="email"
       id="email"
-      placeholder="Email"
+      placeholder=" Digite seu email"
     />
 
     <br />
@@ -39,11 +64,10 @@
     <br />
 
     <label for="Idade"><strong>Idade:</strong></label>
-    <input type="date" name="nascimento" id="nascimento" />
-    <br />
+    <input type="date" name="nascimento" id="nascimento" /> <br />
     <br />
     Cidade
-    <select name="cidade" id="cidade">
+    <select style="font-family: Segoe UI" name="cidade" id="cidade">
       <option value="">Selecione sua cidade</option>
       <option value="sao_paulo">São Paulo</option>
       <option value="rio_de_janeiro">Rio de Janeiro</option>
@@ -85,7 +109,7 @@
       style="
         font-size: 16px;
         padding: 10px 20px;
-        background-color: #4caf50;
+        background-color: #17c71d;
         color: white;
         border: none;
         border-radius: 5px;
