@@ -4,6 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .social-buttons {
+  display: flex;
+  gap: 10px; /* espaço entre os botões */
+  justify-content: center; /* centraliza (opcional) */
+}
+
+.google-btn {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #db4437;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.facebook-btn {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #4267b2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+    </style>
   </head>
   <body style="text-align: center">
     <h1>Login</h1>
@@ -25,13 +52,40 @@
     <input required type="password" id="senha" placeholder="Digite sua senha" />
 
     <br />
-    <br />
-    <a href="esqueciMinhaSenha.html" style="font-size: medium"
+    <a href="esqueciMinhaSenha.html" style="font-size: medium;
+     padding: 100px; text-decoration: none;" 
       >Esqueci minha senha</a
     >
+    <br />
+    <br />
+    <input
+      type="button"
+      value="Cadastrar"
+      onclick="alert('Cadastrado com sucesso!')"
+      style="
+        font-size: 16px;
+        padding: 10px 20px;
+        background-color: #17c71d;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      "
+    />
 
     <br />
     <br />
-    <button type="submit">Entrar</button>
+    <div class="social-buttons">
+      <input class="google-btn"
+        type="button"
+        value="Google"
+
+    />
+    <br />
+    <input class="facebook-btn"
+      type="button"
+      value="Facebook"
+ 
+    />
   </body>
 </html>
