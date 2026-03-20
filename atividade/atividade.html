@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox - 3 Casos</title>
+
+    <style>
+      .item {
+        padding: 10px;
+        background: lightblue;
+        margin: 5px;
+      }
+
+      .caso1 {
+        display: flex;
+        width: 400px;
+        height: 200px;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 20px;
+      }
+
+      .caso2 {
+        display: flex;
+        width: 500px;
+        height: 80px;
+        justify-content: space-between;
+        align-items: center;
+        border: 2px solid black;
+        margin-bottom: 20px;
+      }
+
+      .caso3 {
+        display: flex;
+        width: 300px;
+        height: 300px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h3>Caso 1 — Centralizado</h3>
+    <div class="caso1">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+    </div>
+
+    <h3>Caso 2 — Extremidades</h3>
+    <div class="caso2">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+    </div>
+
+    <h3>Caso 3 — Coluna</h3>
+    <div class="caso3">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+    </div>
+  </body>
+</html>

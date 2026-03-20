@@ -11,8 +11,28 @@
         color: #333;
       }
       body {
-        background-color: #cccbcb;
+        background-color: #c4f6ff;
       }
+      .container {
+        width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #e7fafd;
+        border-radius: 10px;
+        box-shadow: 0 0 18px rgba(0, 0, 0, 0.1);
+      }
+        .borda {
+        width: 400px;
+        margin: 0 auto;
+        padding: 27px;
+        background-color: #e7fafd;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .btn {
+        padding-right: 10px;
+      }
+      
     </style>
   </head>
 
@@ -22,14 +42,18 @@
         width: auto;
         vertical-align: middle;
         font-size: 60px;
-        color: #5d9e85;
+        color: #69ceb8;
       "
     >
+    <div class="container">
       CADASTRO
     </h1>
+    
     <form name="telaCadastro" action="/Cadastro" method="post"></form>
-
+    </div>
+    <div class="borda">
     <label for="nome"> <strong>Nome:</strong></label>
+    
     <input
       required
       maxlength="60"
@@ -39,7 +63,8 @@
     />
     <br />
     <br />
-
+    
+    
     <label for="email"><strong>Email:</strong></label>
     <input
       required
@@ -63,7 +88,7 @@
     <br />
     <br />
 
-    <label for="Idade"><strong>Idade:</strong></label>
+    <label for="Idade"><strong>Data nascimento:</strong></label>
     <input type="date" name="nascimento" id="nascimento" /> <br />
     <br />
     Cidade
@@ -115,6 +140,12 @@
         border-radius: 5px;
         cursor: pointer;
       "
+      
     />
+    <br>
+    
+    <a class="btn" href="TelaLogin.html" style="font-size: medium; padding: 100px; text-decoration: none;"
+      >Já tenho uma conta</a>
+      </div>
   </body>
 </html>

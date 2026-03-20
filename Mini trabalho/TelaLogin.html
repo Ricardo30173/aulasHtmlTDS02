@@ -12,8 +12,8 @@
 }
 
 .google-btn {
-  font-size: 16px;
-  padding: 10px 20px;
+  font-size: 12px;
+  padding: 8px 18px;
   background-color: #db4437;
   color: white;
   border: none;
@@ -22,20 +22,38 @@
 }
 
 .facebook-btn {
-  font-size: 16px;
-  padding: 10px 20px;
+  font-size: 12px;
+  padding: 8px 14px;
   background-color: #4267b2;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 3px;
   cursor: pointer;
 }
+.borda {
+        width: 250px;
+        margin: 55px auto;
+        padding: 10px;
+        background-color: #e0f9fd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .bord{
+        width: 250px;
+        margin: 0 auto;
+        padding: 10px;
+        background-color: #e0f9fd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      
+
     </style>
   </head>
+  <div class="borda">
   <body style="text-align: center">
     <h1>Login</h1>
     <form name="telaLogin" action="/Login" method="post"></form>
-
+</div>
+<div class ="bord">
     <label for="email"><strong>Email:</strong></label>
     <input
       required
@@ -52,10 +70,11 @@
     <input required type="password" id="senha" placeholder="Digite sua senha" />
 
     <br />
-    <a href="esqueciMinhaSenha.html" style="font-size: medium;
-     padding: 100px; text-decoration: none;" 
-      >Esqueci minha senha</a
+    <a href="Cadastro.html" style="font-size: medium; padding: 100px; text-decoration: none;"
+      >Cadastrar-se</a
     >
+    <br>
+    <br>
     <br />
     <br />
     <input
@@ -63,7 +82,7 @@
       value="Cadastrar"
       onclick="alert('Cadastrado com sucesso!')"
       style="
-        font-size: 16px;
+        font-size: 12px;
         padding: 10px 20px;
         background-color: #17c71d;
         color: white;
@@ -85,7 +104,24 @@
     <input class="facebook-btn"
       type="button"
       value="Facebook"
- 
+      
     />
+    <br>
+    <br>
+    <br>
+    <input
+      type="button"
+      value="Microsoft"
+      style="font-size: 12px;
+        padding: 10px 20px;
+        background-color: #2f2f2f;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;"
+      />
+       
+</div>
+    
   </body>
 </html>
