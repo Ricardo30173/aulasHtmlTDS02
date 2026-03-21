@@ -3,149 +3,238 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>telaCadastro</title>
-
+    <title>Tela Cadastro</title>
     <style>
-      label {
-        font-family: Segoe UI;
-        color: #333;
+      :root {
+        --primary-color: #17c71d;
+        --bg-color: #70d3b2;
+        --card-bg: #ffffff;
+        --text-color: #333;
+        --input-border: #ddd;
       }
+
       body {
-        background-color: #c4f6ff;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(
+          90deg,
+          #2a7b9b 0%,
+          #57c785 50%,
+          #eddd53 100%
+        );
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
       }
+
+      .header-box {
+        background-color: rgb(255, 255, 255);
+        padding: 20px 60px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        margin-bottom: 30px;
+      }
+
+      h1 {
+        color: #333333;
+        margin: 0;
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+      }
+
       .container {
-        width: 400px;
-        margin: 50px auto;
-        padding: 20px;
-        background-color: #e7fafd;
-        border-radius: 10px;
-        box-shadow: 0 0 18px rgba(0, 0, 0, 0.1);
+        background-color: var(--card-bg);
+        width: 100%;
+        max-width: 400px;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
       }
-        .borda {
-        width: 400px;
-        margin: 0 auto;
-        padding: 27px;
-        background-color: #e7fafd;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+      .form-group {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
       }
-      .btn {
-        padding-right: 10px;
+
+      label {
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: var(--text-color);
+        font-size: 0.9rem;
       }
-      
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="date"],
+      select {
+        padding: 12px;
+        border: 1px solid var(--input-border);
+        border-radius: 8px;
+        font-size: 1rem;
+        outline: none;
+        transition: border-color 0.3s;
+      }
+
+      input:focus {
+        border-color: var(--primary-color);
+      }
+
+      .gender-section {
+        margin: 20px 0;
+        text-align: center;
+      }
+
+      .radio-group {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+      }
+
+      .btn-submit {
+        width: 100%;
+        background-color: var(--primary-color);
+        color: white;
+        padding: 14px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+
+      .btn-submit:hover {
+        background-color: #14a318;
+        transform: translateY(-2px);
+      }
+
+      .footer-link {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        color: #6a5acd;
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
+
+      .footer-link:hover {
+        text-decoration: underline;
+      }
     </style>
   </head>
-
-  <body style="text-align: center">
-    <h1
-      style="
-        width: auto;
-        vertical-align: middle;
-        font-size: 60px;
-        color: #69ceb8;
-      "
-    >
-    <div class="container">
-      CADASTRO
-    </h1>
-    
-    <form name="telaCadastro" action="/Cadastro" method="post"></form>
+  <body>
+    <div class="header-box">
+      <h1>CADASTRO</h1>
     </div>
-    <div class="borda">
-    <label for="nome"> <strong>Nome:</strong></label>
-    
-    <input
-      required
-      maxlength="60"
-      type="text"
-      id="nome"
-      placeholder="Digite seu nome"
-    />
-    <br />
-    <br />
-    
-    
-    <label for="email"><strong>Email:</strong></label>
-    <input
-      required
-      maxlength="180"
-      type="email"
-      id="email"
-      placeholder=" Digite seu email"
-    />
 
-    <br />
-    <br />
+    <div class="container">
+      <form action="/Cadastro" method="post">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Digite seu nome"
+            required
+          />
+        </div>
 
-    <label maxlength="180" for="senha"><strong>Senha:</strong></label>
-    <input required type="password" id="senha" placeholder="Digite sua senha" />
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Digite seu email"
+            required
+          />
+        </div>
 
-    <br />
-    <br />
+        <div class="form-group">
+          <label for="senha">Senha:</label>
+          <input
+            type="password"
+            id="senha"
+            name="senha"
+            placeholder="Digite sua senha"
+            required
+          />
+        </div>
 
-    <label maxlength="180" for="senha"><strong>Senha:</strong></label>
-    <input required type="password" id="senha" placeholder="Confirmar senha" />
-    <br />
-    <br />
+        <div class="form-group">
+          <label for="confirma_senha">Confirmar Senha:</label>
+          <input
+            type="password"
+            id="confirma_senha"
+            placeholder="Confirme sua senha"
+            required
+          />
+        </div>
 
-    <label for="Idade"><strong>Data nascimento:</strong></label>
-    <input type="date" name="nascimento" id="nascimento" /> <br />
-    <br />
-    Cidade
-    <select style="font-family: Segoe UI" name="cidade" id="cidade">
-      <option value="">Selecione sua cidade</option>
-      <option value="sao_paulo">São Paulo</option>
-      <option value="rio_de_janeiro">Rio de Janeiro</option>
-      <option value="belo_horizonte">Belo Horizonte</option>
-      <option value="salvador">Salvador</option>
-      <option value="fortaleza">Fortaleza</option>
-      <option value="curitiba">Curitiba</option>
-      <option value="recife">Recife</option>
-      <option value="porto_alegre">Porto Alegre</option>
-      <option value="brasilia">Brasília</option>
-      <option value="goiania">Goiânia</option>
-      <option value="manaus">Manaus</option>
-      <option value="belem">Belém</option>
-      <option value="campinas">Campinas</option>
-      <option value="sao_luis">São Luís</option>
-      <option value="cuiaba">Cuiabá</option>
-      <option value="joao_pessoa">João Pessoa</option>
-      <option value="aracaju">Aracaju</option>
-      <option value="Outro">Outro</option>
-    </select>
-    <br />
-    <br />
-    <label><strong>Sexo:</strong></label
-    ><br />
-    <input type="radio" name="sexo" id="masculino" value="masculino" />
-    <label for="masculino">Masculino</label>
-    <input type="radio" name="sexo" id="feminino" value="feminino" />
-    <label for="feminino">Feminino</label>
-    <input type="radio" name="sexo" id="outro" value="outro" />
-    <label for="outro">Outro</label>
+        <div class="form-group">
+          <label for="nascimento">Data de Nascimento:</label>
+          <input type="date" id="nascimento" name="nascimento" required />
+        </div>
 
-    <br />
-    <br />
+        <div class="form-group">
+          <label for="cidade">Cidade:</label>
+          <select id="cidade" name="cidade">
+            <option value="">Selecione sua cidade</option>
+            <option value="sao_paulo">São Paulo</option>
+            <option value="rio_de_janeiro">Rio de Janeiro</option>
+            <option value="belo_horizonte">Belo Horizonte</option>
+            <option value="portland">Porto Alegre</option>
+            <option value="bahia">Bahia</option>
+            <option value="parana">Paraná</option>
+            <option value="ceara">Ceará</option>
+            <option value="para">Pará</option>
+            <option value="pernambuco">Pernambuco</option>
+            <option value="amazonas">Amazonas</option>
+            <option value="maranhao">Maranhão</option>
+            <option value="goias">Goiás</option>
+            <option value="espirito_santo">Espírito Santo</option>
+            <option value="matogrosso">Mato Grosso</option>
+            <option value="matogrosso_sul">Mato Grosso do Sul</option>
+            <option value="rondonia">Rondônia</option>
+            <option value="roraima">Roraima</option>
+            <option value="acre">Acre</option>
+            <option value="outro">Outro</option>
+          </select>
+        </div>
 
-    <input
-      type="button"
-      value="Cadastrar"
-      onclick="alert('Cadastrado com sucesso!')"
-      style="
-        font-size: 16px;
-        padding: 10px 20px;
-        background-color: #17c71d;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      "
-      
-    />
-    <br>
-    
-    <a class="btn" href="TelaLogin.html" style="font-size: medium; padding: 100px; text-decoration: none;"
-      >Já tenho uma conta</a>
-      </div>
+        <div class="gender-section">
+          <label>Sexo:</label>
+          <div class="radio-group">
+            <label
+              ><input type="radio" name="sexo" value="masculino" />
+              Masculino</label
+            >
+            <label
+              ><input type="radio" name="sexo" value="feminino" />
+              Feminino</label
+            >
+            <label
+              ><input type="radio" name="sexo" value="outro" /> Outro</label
+            >
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          class="btn-submit"
+          onclick="alert('Cadastrado com sucesso!')"
+        >
+          Cadastrar
+        </button>
+
+        <a href="TelaLogin.html" class="footer-link">Já tenho uma conta</a>
+      </form>
+    </div>
   </body>
 </html>
