@@ -10,6 +10,7 @@
         margin: 0;
         display: flex;
         justify-content: center;
+        padding-left: 170px;
         align-items: center;
         min-height: 100vh;
         background: linear-gradient(
@@ -23,10 +24,9 @@
       .border-content {
         width: 100%;
         max-width: 400px;
-        margin: auto;
-        padding: 2rem;
+        padding: 60px;
         background-color: #ffffff;
-        border-radius: 12px;
+        border-radius: 25px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
 
@@ -41,9 +41,9 @@
 
       input[type="email"],
       input[type="password"] {
-        width: calc(100% - 20px);
+        width: 100%;
         padding: 10px;
-        margin-bottom: 1rem;
+        margin-bottom: 15px;
         border: 1px solid #ddd;
         border-radius: 6px;
         font-size: 1rem;
@@ -53,7 +53,6 @@
       input[type="email"]:focus,
       input[type="password"]:focus {
         border-color: #17c71d;
-        outline: none;
       }
 
       input[type="button"] {
@@ -119,8 +118,91 @@
       .signup-link a:hover {
         color: #17c71d;
       }
+      .FontSenac {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #000000;
+        margin-top: 10px;
+        font-size: 80px;
+      }
+      .container-geral {
+        padding-left: 50px;
+        display: grid;
+        padding-right: 30px;
+        height: 100vh;
+        height: 290px;
+      }
+
+      .lado-esquerdo {
+        flex: 1;
+        background-color: transparent;
+
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+      }
+
+      .conteudo-esquerdo {
+        max-width: 400px;
+      }
+
+      .conteudo-esquerdo h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+      }
+
+      .conteudo-esquerdo h2 {
+        font-size: 24px;
+        align-items: start;
+        margin-bottom: 20px;
+      }
+
+      .conteudo-esquerdo p {
+        margin-bottom: 30px;
+        font-size: 16px;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 15px;
+        border-radius: 10px;
+      }
+
+      .lado-direito {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     </style>
   </head>
+  <div class="container-geral">
+    <div class="lado-esquerdo">
+      <div class="conteudo-esquerdo">
+        <h1>SENAC</h1>
+        <h2>Bem-vindo de volta!</h2>
+        <p>
+          Acesse seu painel acadêmico e acompanhe seu progresso educacional.
+        </p>
+
+        <div class="cards">
+          <div class="card">📊 Desempenho</div>
+          <div class="card">📅 Agenda</div>
+          <div class="card">🎓 Oportunidades</div>
+          <div class="card">🤖 Assistente</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lado-direito"></div>
+  </div>
   <body style="text-align: center">
     <div class="border-content">
       <h1>Login</h1>
